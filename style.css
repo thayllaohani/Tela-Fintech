@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@700;800;900&family=Poppins:wght@400;500&display=swap');
+
+/* Fonte padrão de todo o site */
+body {
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Títulos e elementos com classe font-display no HTML */
+h1, h2, h3 {
+  font-family: 'Nunito', sans-serif;
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;               /* começa invisível        */
+    transform: translateY(18px); /* começa 18px abaixo   */
+  }
+  to {
+    opacity: 1;               /* termina visível          */
+    transform: translateY(0); /* volta para posição normal */
+  }
+}
+
+.fade-up {
+  animation: fadeUp 0.45s ease both;
+}
+
+/* ── 3. CORREÇÕES DO NAVEGADOR ──────────────────────
+   Quando o navegador preenche campos automaticamente
+   (autocomplete), ele costuma colocar um fundo azul.
+   Este trecho substitui esse fundo por branco.
+─────────────────────────────────────────────────── */
+input:-webkit-autofill,
+input:-webkit-autofill:focus {
+  -webkit-box-shadow: 0 0 0 1000px #ffffff inset;
+  -webkit-text-fill-color: #555555;
+}
+
+/* Cor e tamanho do texto placeholder dos inputs */
+input::placeholder {
+  color: #bbbbbb;
+  font-size: 13px;
+}
